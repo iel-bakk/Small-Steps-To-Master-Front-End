@@ -19,11 +19,11 @@ const Cards = []
 
 for (const card in cardsTitles) {
     const CardContainer = document.createElement("dl")
-    const CardTitle = document.createTextNode("dt")
-    const CardText = document.createTextNode("dd")
+    const CardTitle = document.createElement("dt")
+    const CardText = document.createElement("dd")
     const image = document.createElement("img")
 
-    CardTitle.textContent = cardsTitles[card].title
+    CardTitle.textContent = cardsTitles[card].title.toLocaleUpperCase()
     CardText.textContent = cardsTitles[card].description
     image.src = `./images/${cardsTitles[card].title}.jpg` 
     CardContainer.appendChild(CardTitle)
