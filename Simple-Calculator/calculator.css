@@ -14,7 +14,6 @@ body {
 }
 
 main {
-    box-sizing: content-box;
     padding: 2rem;
     border: 1px #6D6666 solid;
     border-radius: 16px;
@@ -40,7 +39,7 @@ button {
 button:hover  {
     background-color: #0A0A0A;
     color: white;
-    outline: white;
+    border: 1px white solid;
 }
 
 .firstSection {
@@ -57,6 +56,7 @@ button:hover  {
 
 .firstSection input {
     background-color: black;
+    word-wrap: break-word;
     color : white;
 }
 

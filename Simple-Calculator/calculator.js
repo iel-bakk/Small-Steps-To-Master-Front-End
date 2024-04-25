@@ -11,6 +11,7 @@ const thirdSection = document.createElement("div")
 
 // create first section elements
 const firstSectionInput = document.createElement("input")
+    firstSectionInput.placeholder = "ONLY USE ONE OP !"
 const firstSectionDelete = document.createElement("button")
     firstSectionDelete.textContent = "DEL"
     firstSectionDelete.addEventListener("click", ()=> {
@@ -65,6 +66,24 @@ secondSection.appendChild(secondSubSection)
 
     const equalButton = document.createElement("button")
         equalButton.textContent = "="
+        equalButton.addEventListener("click", ()=> {
+            const inputNumbers = firstSectionInput.value.split(" ")
+            if (inputNumbers.length === 3) {
+                switch (inputNumbers[1]) {
+                    case "+" :
+                        firstSectionInput.value = parseInt(inputNumbers[0]) + parseInt(inputNumbers[2]);
+                        break ;
+                    case "-" :
+                        firstSectionInput.value = parseInt(inputNumbers[0]) - parseInt(inputNumbers[2]);
+                        break ;
+                    default :
+                        firstSectionInput.value = ""
+                    }
+                }
+            else {
+                firstSectionInput.value = ""
+            }
+        })
     const ClearButton = document.createElement("button")
         ClearButton.textContent = "CLEAR"
         ClearButton.addEventListener("click", ()=> {
