@@ -35,8 +35,6 @@ const firstSectionDelete = document.createElement("button")
             // add the event listener to change the calculation formula
             button.addEventListener("click", (e)=> {
                 firstSectionInput.value += e.target.textContent;
-                console.log("clicked on a number : ", e.target.textContent)
-                console.log("input text content is ", firstSectionInput.textContent)
             })
             firstSubSection.appendChild(button)
         }
